@@ -73,6 +73,16 @@ namespace app.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap prog1 {
+            get {
+                object obj = ResourceManager.GetObject("prog1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap xp_windows_vektor_74137_2560x1440 {
             get {
                 object obj = ResourceManager.GetObject("xp_windows_vektor_74137_2560x1440", resourceCulture);

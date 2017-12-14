@@ -21,6 +21,7 @@ namespace app
                 updateTimer.Tick += UpdateTimer_Tick;
                 updateTimer.Enabled = true;
                 InitializeComponent();
+                player.Focus(); //можем с ним шото делать
                 DoubleBuffered = true; //убирает мелькание
             }
 
@@ -56,27 +57,20 @@ namespace app
                 down(Icon);
 
             }
-
-            private void pictureBox1_Click(object sender, EventArgs e)
-            {
-
-            }
-
-            private void move(object sender, PreviewKeyDownEventArgs e)
-            {
-
-                if (e.KeyData == Keys.Left)
-                    player.Location = new Point(player.Location.X - 145, player.Location.Y);
-
-                if (e.KeyData == Keys.Right)
-                    player.Location = new Point(player.Location.X + 145, player.Location.Y);
-
-            }
-
-        private void Form1_Load(object sender, EventArgs e)
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
-
+            switch (keyData)
+            {
+                case Keys.Left: player.Left -= 10; break;
+                case Keys.Right: player.Left += 10; break;
+                
+                default: return base.ProcessCmdKey(ref msg, keyData);
+            }
+            return true;
         }
+
+
+
         /*private void DrawImageRectRect(PaintEventArgs e) для перерисовки, что б не мигала картинка
 {
 

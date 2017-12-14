@@ -28,24 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.player = new System.Windows.Forms.PictureBox();
             this.Icon1 = new System.Windows.Forms.PictureBox();
             this.Icon2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
+            this.player = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Icon1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Icon2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
             this.SuspendLayout();
-            // 
-            // player
-            // 
-            this.player.BackColor = System.Drawing.Color.Transparent;
-            this.player.BackgroundImage = global::app.Properties.Resources.prog;
-            this.player.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.player.Location = new System.Drawing.Point(-7, 252);
-            this.player.Name = "player";
-            this.player.Size = new System.Drawing.Size(173, 163);
-            this.player.TabIndex = 0;
-            this.player.TabStop = false;
             // 
             // Icon1
             // 
@@ -63,31 +52,42 @@
             this.Icon2.TabIndex = 2;
             this.Icon2.TabStop = false;
             // 
+            // player
+            // 
+            this.player.BackColor = System.Drawing.Color.Transparent;
+            this.player.BackgroundImage = global::app.Properties.Resources.prog1;
+            this.player.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.player.Location = new System.Drawing.Point(-7, 225);
+            this.player.Name = "player";
+            this.player.Size = new System.Drawing.Size(146, 141);
+            this.player.TabIndex = 3;
+            this.player.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::app.Properties.Resources.xp_windows_vektor_74137_2560x1440;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(634, 411);
+            this.ClientSize = new System.Drawing.Size(634, 361);
+            this.Controls.Add(this.player);
             this.Controls.Add(this.Icon2);
             this.Controls.Add(this.Icon1);
-            this.Controls.Add(this.player);
+            this.MinimizeBox = false;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Icon1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Icon2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox player;
         private System.Windows.Forms.PictureBox Icon1;
         private System.Windows.Forms.PictureBox Icon2;
+        private System.Windows.Forms.PictureBox player;
     }
 }
 
