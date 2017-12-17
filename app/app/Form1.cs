@@ -18,7 +18,7 @@ namespace app
         public Form1()
             {
                 updateTimer = new Timer();
-                updateTimer.Interval = 1000; //переодичность, частота 150мсек
+                updateTimer.Interval = 500; //переодичность, частота 150мсек
                 updateTimer.Tick += UpdateTimer_Tick;
                 updateTimer.Enabled = true;
                 iconTimer = new Timer();
@@ -66,7 +66,7 @@ namespace app
             up(Icon, x, r);
             for (int i = 0; i < Icon.Length; i++) // цикл для скрытия иконок при соприкосновении с человечком
             {
-                if ((player.Location.Y - 50) < Icon[i].Location.Y & Icon[i].Location.Y < (player.Location.Y + 141) & player.Location.X < Icon[i].Location.X & Icon[i].Location.X < (player.Location.X + 146))
+                if ((player.Location.Y - 50) < (Icon[i].Location.Y + 60) & (Icon[i].Location.Y + 60) < (player.Location.Y + 141) & player.Location.X < (Icon[i].Location.X + 60) & (Icon[i].Location.X + 60) < (player.Location.X + 146))
                 {
                     Icon[i].Hide(); //иконка скрывается при соприкосновении с человечком
                 }
@@ -80,20 +80,37 @@ namespace app
             {
                 if (icon[i].Location.Y > 300)
                 {
-                       if (x == 1)
-                            icon[i].Location = new Point(50 + r, -90);
+                    if (x == 1)
+                    {
+                        icon[i].Location = new Point(50 + r, -40);
+                        icon[i].Show();
+                    }
+                            
                         else if (x == 2)
-                            icon[i].Location = new Point(150 + r, -90);
+                    {
+                        icon[i].Location = new Point(150 + r, -40);
+                        icon[i].Show();
+                    }
+                            
                         else if (x == 3)
-                            icon[i].Location = new Point(250 + r, -90);
+                    {
+                        icon[i].Location = new Point(250 + r, -40);
+                        icon[i].Show();
+                    }
+                            
                         else if (x == 4)
-                            icon[i].Location = new Point(350 + r, -90);
-                        else
-                            icon[i].Location = new Point(400 + r, -90);
-                    
+                    {
+                        icon[i].Location = new Point(350 + r, -40);
+                        icon[i].Show();
+                    }
+                            
+                        else {
+                        icon[i].Location = new Point(400 + r, -40);
+                        icon[i].Show();
+                    }
+                
                 }
-                else if (icon[i].Location.Y < 200)  icon[i].Show(); //иконка появляется заново
-
+             
             }
         }
        

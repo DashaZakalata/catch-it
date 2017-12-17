@@ -38,18 +38,22 @@
             // 
             // Icon1
             // 
-            this.Icon1.Location = new System.Drawing.Point(154, 12);
+            this.Icon1.BackgroundImage = global::app.Properties.Resources.Icon1;
+            this.Icon1.Location = new System.Drawing.Point(30, 10);
             this.Icon1.Name = "Icon1";
-            this.Icon1.Size = new System.Drawing.Size(65, 50);
+            this.Icon1.Size = new System.Drawing.Size(60, 60);
             this.Icon1.TabIndex = 1;
             this.Icon1.TabStop = false;
             this.Icon1.Click += new System.EventHandler(this.Icon1_Click);
             // 
             // Icon2
             // 
-            this.Icon2.Location = new System.Drawing.Point(285, -129);
+            this.Icon2.BackColor = System.Drawing.SystemColors.Control;
+            this.Icon2.BackgroundImage = global::app.Properties.Resources.Icon5;
+            this.Icon2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Icon2.Location = new System.Drawing.Point(285, -60);
             this.Icon2.Name = "Icon2";
-            this.Icon2.Size = new System.Drawing.Size(65, 50);
+            this.Icon2.Size = new System.Drawing.Size(60, 60);
             this.Icon2.TabIndex = 2;
             this.Icon2.TabStop = false;
             // 
