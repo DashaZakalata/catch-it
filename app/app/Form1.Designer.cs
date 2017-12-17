@@ -38,7 +38,7 @@
             // 
             // Icon1
             // 
-            this.Icon1.Location = new System.Drawing.Point(130, 29);
+            this.Icon1.Location = new System.Drawing.Point(154, 12);
             this.Icon1.Name = "Icon1";
             this.Icon1.Size = new System.Drawing.Size(65, 50);
             this.Icon1.TabIndex = 1;

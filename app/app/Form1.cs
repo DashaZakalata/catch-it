@@ -50,20 +50,28 @@ namespace app
             {
                 for (int i = 0; i < icon.Length; i++)
                 {
-                    icon[i].Location = new Point(icon[i].Location.X, icon[i].Location.Y + 100);
+                   icon[i].Location = new Point(icon[i].Location.X, icon[i].Location.Y + 30);
                 }           
             }
 
-        private void iconTimer_Tick(object sender, EventArgs e) //для генерации чисел в изменении положений иконок
+        private void iconTimer_Tick(object sender, EventArgs e) //для генерации чисел в изменении положений иконок по оси Х
         {
-            Random gen = new Random();
+            Random gen = new Random(); 
             int x;
             x = gen.Next(1, 5);
-            Random col = new Random();
+            Random col = new Random(); 
             int r;
             r = col.Next(50, 100);
             PictureBox[] Icon = new PictureBox[] { Icon1, Icon2 };
             up(Icon, x, r);
+            for (int i = 0; i < Icon.Length; i++) // цикл для скрытия иконок при соприкосновении с человечком
+            {
+                if ((player.Location.Y - 50) < Icon[i].Location.Y & Icon[i].Location.Y < (player.Location.Y + 141) & player.Location.X < Icon[i].Location.X & Icon[i].Location.X < (player.Location.X + 146))
+                {
+                    Icon[i].Hide(); //иконка скрывается при соприкосновении с человечком
+                }
+            }
+                
         }
 
         public void up(PictureBox[] icon, int x, int r) //появление иконки еще раз (изменение координат)
@@ -83,7 +91,9 @@ namespace app
                         else
                             icon[i].Location = new Point(400 + r, -90);
                     
-                }      
+                }
+                else if (icon[i].Location.Y < 200)  icon[i].Show(); //иконка появляется заново
+
             }
         }
        
