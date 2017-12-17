@@ -43,10 +43,11 @@
             this.Icon1.Size = new System.Drawing.Size(65, 50);
             this.Icon1.TabIndex = 1;
             this.Icon1.TabStop = false;
+            this.Icon1.Click += new System.EventHandler(this.Icon1_Click);
             // 
             // Icon2
             // 
-            this.Icon2.Location = new System.Drawing.Point(285, 29);
+            this.Icon2.Location = new System.Drawing.Point(285, -129);
             this.Icon2.Name = "Icon2";
             this.Icon2.Size = new System.Drawing.Size(65, 50);
             this.Icon2.TabIndex = 2;

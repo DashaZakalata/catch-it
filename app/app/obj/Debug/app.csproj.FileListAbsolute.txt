@@ -7,3 +7,12 @@ C:\Users\Admin\Documents\GitHub\catch-it\app\app\obj\Debug\app.Properties.Resour
 C:\Users\Admin\Documents\GitHub\catch-it\app\app\obj\Debug\app.csproj.GenerateResource.Cache
 C:\Users\Admin\Documents\GitHub\catch-it\app\app\bin\Debug\app.exe
 C:\Users\Admin\Documents\GitHub\catch-it\app\app\bin\Debug\app.pdb
+D:\web\GitHub\catch-it\app\app\bin\Debug\app.exe.config
+D:\web\GitHub\catch-it\app\app\obj\Debug\app.exe
+D:\web\GitHub\catch-it\app\app\obj\Debug\app.pdb
+D:\web\GitHub\catch-it\app\app\bin\Debug\app.exe
+D:\web\GitHub\catch-it\app\app\bin\Debug\app.pdb
+D:\web\GitHub\catch-it\app\app\obj\Debug\app.csprojResolveAssemblyReference.cache
+D:\web\GitHub\catch-it\app\app\obj\Debug\app.Form1.resources
+D:\web\GitHub\catch-it\app\app\obj\Debug\app.Properties.Resources.resources
+D:\web\GitHub\catch-it\app\app\obj\Debug\app.csproj.GenerateResource.Cache

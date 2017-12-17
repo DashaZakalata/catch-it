@@ -13,17 +13,22 @@ namespace app
         public partial class Form1 : Form
         {
             private readonly Timer updateTimer;
+            private readonly Timer iconTimer;
 
-            public Form1()
+        public Form1()
             {
                 updateTimer = new Timer();
                 updateTimer.Interval = 1000; //переодичность, частота 150мсек
                 updateTimer.Tick += UpdateTimer_Tick;
                 updateTimer.Enabled = true;
+                iconTimer = new Timer();
+                iconTimer.Interval = 500; //для генерации чисел изменения положения иконок
+                iconTimer.Tick += iconTimer_Tick;
+                iconTimer.Enabled = true;
                 InitializeComponent();
                 player.Focus(); //можем с ним шото делать
                 DoubleBuffered = true; //убирает мелькание
-            }
+        }
 
             public void dropIcon(Point[] start, PictureBox[] Icon)
             {
@@ -39,24 +44,60 @@ namespace app
                 }
             }
 
-            public void down(PictureBox[] icon) //движение иконки вниз
+       
+
+        public void down(PictureBox[] icon) //движение иконки вниз
             {
                 for (int i = 0; i < icon.Length; i++)
                 {
                     icon[i].Location = new Point(icon[i].Location.X, icon[i].Location.Y + 100);
-                }
+                }           
             }
 
-            private void UpdateTimer_Tick(object sender, EventArgs e)
+        private void iconTimer_Tick(object sender, EventArgs e) //для генерации чисел в изменении положений иконок
+        {
+            Random gen = new Random();
+            int x;
+            x = gen.Next(1, 5);
+            Random col = new Random();
+            int r;
+            r = col.Next(50, 100);
+            PictureBox[] Icon = new PictureBox[] { Icon1, Icon2 };
+            up(Icon, x, r);
+        }
+
+        public void up(PictureBox[] icon, int x, int r) //появление иконки еще раз (изменение координат)
+        {
+            for (int i = 0; i < icon.Length; i++)
             {
-                Point start1 = new Point(100, 0);
-                Point start2 = new Point(200, 0);
+                if (icon[i].Location.Y > 300)
+                {
+                       if (x == 1)
+                            icon[i].Location = new Point(50 + r, -90);
+                        else if (x == 2)
+                            icon[i].Location = new Point(150 + r, -90);
+                        else if (x == 3)
+                            icon[i].Location = new Point(250 + r, -90);
+                        else if (x == 4)
+                            icon[i].Location = new Point(350 + r, -90);
+                        else
+                            icon[i].Location = new Point(400 + r, -90);
+                    
+                }      
+            }
+        }
+       
+        private void UpdateTimer_Tick(object sender, EventArgs e)
+            {
+               Point start1 = new Point(200, 0);
+                Point start2 = new Point(300, -100);
                 Point[] start = new Point[] { start1, start2 }; //количество позиций
 
-                PictureBox[] Icon = new PictureBox[] { Icon1, Icon2 };
+                PictureBox[] Icon = new PictureBox[] { Icon1, Icon2 };           
                 down(Icon);
+            
 
-            }
+        }
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
             switch (keyData)
@@ -67,6 +108,11 @@ namespace app
                 default: return base.ProcessCmdKey(ref msg, keyData);
             }
             return true;
+        }
+
+        private void Icon1_Click(object sender, EventArgs e)
+        {
+
         }
 
 
