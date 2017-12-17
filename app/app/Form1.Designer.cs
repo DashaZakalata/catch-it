@@ -34,6 +34,7 @@
             this.Icon5 = new System.Windows.Forms.PictureBox();
             this.Icon4 = new System.Windows.Forms.PictureBox();
             this.Icon3 = new System.Windows.Forms.PictureBox();
+            this.TextBox = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.Icon1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Icon2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
@@ -108,6 +109,23 @@
             this.Icon3.TabIndex = 5;
             this.Icon3.TabStop = false;
             // 
+            // TextBox
+            // 
+            this.TextBox.BackColor = System.Drawing.Color.Wheat;
+            this.TextBox.Cursor = System.Windows.Forms.Cursors.SizeAll;
+            this.TextBox.Enabled = false;
+            this.TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TextBox.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.TextBox.HideSelection = false;
+            this.TextBox.Location = new System.Drawing.Point(540, 10);
+            this.TextBox.Margin = new System.Windows.Forms.Padding(13);
+            this.TextBox.Name = "TextBox";
+            this.TextBox.ReadOnly = true;
+            this.TextBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.TextBox.Size = new System.Drawing.Size(82, 32);
+            this.TextBox.TabIndex = 7;
+            this.TextBox.Text = "0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -115,6 +133,7 @@
             this.BackgroundImage = global::app.Properties.Resources.xp_windows_vektor_74137_2560x1440;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(634, 361);
+            this.Controls.Add(this.TextBox);
             this.Controls.Add(this.Icon3);
             this.Controls.Add(this.Icon4);
             this.Controls.Add(this.Icon5);
@@ -125,6 +144,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Icon1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Icon2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
@@ -142,6 +162,7 @@
         private System.Windows.Forms.PictureBox Icon5;
         private System.Windows.Forms.PictureBox Icon4;
         private System.Windows.Forms.PictureBox Icon3;
+        private System.Windows.Forms.RichTextBox TextBox;
     }
 }
 

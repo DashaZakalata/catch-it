@@ -14,20 +14,22 @@ namespace app
         {
             private readonly Timer updateTimer;
             private readonly Timer iconTimer;
+            private int score = 10;
 
         public Form1()
             {
                 updateTimer = new Timer();
-                updateTimer.Interval = 1000; //переодичность, частота 150мсек
+                updateTimer.Interval =700; //переодичность, частота 150мсек
                 updateTimer.Tick += UpdateTimer_Tick;
                 updateTimer.Enabled = true;
                 iconTimer = new Timer();
-                iconTimer.Interval = 500; //для генерации чисел изменения положения иконок
+                iconTimer.Interval = 1800; //для генерации чисел изменения положения иконок
                 iconTimer.Tick += iconTimer_Tick;
                 iconTimer.Enabled = true;
                 InitializeComponent();
                 player.Focus(); //можем с ним шото делать
                 DoubleBuffered = true; //убирает мелькание
+            
         }
 
             public void dropIcon(Point[] start, PictureBox[] Icon)
@@ -63,10 +65,13 @@ namespace app
             up(Icon, x);
             for (int i = 0; i < Icon.Length; i++) // цикл для скрытия иконок при соприкосновении с человечком
             {
-                if ((player.Location.Y - 50) < (Icon[i].Location.Y + 60) & (Icon[i].Location.Y + 60) < (player.Location.Y + 20) & player.Location.X < (Icon[i].Location.X + 60) & (Icon[i].Location.X + 60) < (player.Location.X + 146))
+                if ((player.Location.Y - 50) < (Icon[i].Location.Y + 60) & (Icon[i].Location.Y + 60) < (player.Location.Y + 40) & player.Location.X < (Icon[i].Location.X + 60) & (Icon[i].Location.X + 60) < (player.Location.X + 146))
                 {
-                    Icon[i].Hide(); //иконка скрывается при соприкосновении с человечком
+                    Icon[i].Hide();//иконка скрывается при соприкосновении с человечком
+                    TextBox.Text = score.ToString(); // cчитаются и выводятся очки
+                    score += 10;
                 }
+                
             }
                 
         }
@@ -76,17 +81,17 @@ namespace app
             for (int i = 0, c = 50; i < icon.Length & c < 600; i++, c+=80)
             {
 
-                if (icon[i].Location.Y > 300)
+                if (icon[i].Location.Y > 200)
                 {
-                    if (x == 1)  icon[i].Location = new Point(10 + c, -40);
+                    if (x == 1)  icon[i].Location = new Point(10 + c, -70);
                                      
-                    else if (x == 2) icon[i].Location = new Point(100 + c, -40);
+                    else if (x == 2) icon[i].Location = new Point(100 + c, -70);
                                            
-                    else if (x == 3) icon[i].Location = new Point(230 + c, -40);
+                    else if (x == 3) icon[i].Location = new Point(230 + c, -70);
                    
-                    else if (x == 4) icon[i].Location = new Point(300 + c, -40);
+                    else if (x == 4) icon[i].Location = new Point(300 + c, -70);
                      
-                    else  icon[i].Location = new Point(370 + c, -40);
+                    else  icon[i].Location = new Point(370 + c, -70);
                 
                     icon[i].Show();
                     
@@ -123,6 +128,11 @@ namespace app
         }
 
         private void Icon1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }
