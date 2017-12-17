@@ -18,7 +18,7 @@ namespace app
         public Form1()
             {
                 updateTimer = new Timer();
-                updateTimer.Interval = 500; //переодичность, частота 150мсек
+                updateTimer.Interval = 1000; //переодичность, частота 150мсек
                 updateTimer.Tick += UpdateTimer_Tick;
                 updateTimer.Enabled = true;
                 iconTimer = new Timer();
@@ -59,14 +59,11 @@ namespace app
             Random gen = new Random(); 
             int x;
             x = gen.Next(1, 5);
-            Random col = new Random(); 
-            int r;
-            r = col.Next(50, 100);
-            PictureBox[] Icon = new PictureBox[] { Icon1, Icon2 };
-            up(Icon, x, r);
+            PictureBox[] Icon = new PictureBox[] { Icon1, Icon2, Icon3, Icon4, Icon5 };
+            up(Icon, x);
             for (int i = 0; i < Icon.Length; i++) // цикл для скрытия иконок при соприкосновении с человечком
             {
-                if ((player.Location.Y - 50) < (Icon[i].Location.Y + 60) & (Icon[i].Location.Y + 60) < (player.Location.Y + 141) & player.Location.X < (Icon[i].Location.X + 60) & (Icon[i].Location.X + 60) < (player.Location.X + 146))
+                if ((player.Location.Y - 50) < (Icon[i].Location.Y + 60) & (Icon[i].Location.Y + 60) < (player.Location.Y + 20) & player.Location.X < (Icon[i].Location.X + 60) & (Icon[i].Location.X + 60) < (player.Location.X + 146))
                 {
                     Icon[i].Hide(); //иконка скрывается при соприкосновении с человечком
                 }
@@ -74,53 +71,41 @@ namespace app
                 
         }
 
-        public void up(PictureBox[] icon, int x, int r) //появление иконки еще раз (изменение координат)
+        public void up(PictureBox[] icon, int x) //появление иконки еще раз (изменение координат)
         {
-            for (int i = 0; i < icon.Length; i++)
+            for (int i = 0, c = 50; i < icon.Length & c < 600; i++, c+=80)
             {
+
                 if (icon[i].Location.Y > 300)
                 {
-                    if (x == 1)
-                    {
-                        icon[i].Location = new Point(50 + r, -40);
-                        icon[i].Show();
-                    }
-                            
-                        else if (x == 2)
-                    {
-                        icon[i].Location = new Point(150 + r, -40);
-                        icon[i].Show();
-                    }
-                            
-                        else if (x == 3)
-                    {
-                        icon[i].Location = new Point(250 + r, -40);
-                        icon[i].Show();
-                    }
-                            
-                        else if (x == 4)
-                    {
-                        icon[i].Location = new Point(350 + r, -40);
-                        icon[i].Show();
-                    }
-                            
-                        else {
-                        icon[i].Location = new Point(400 + r, -40);
-                        icon[i].Show();
-                    }
+                    if (x == 1)  icon[i].Location = new Point(10 + c, -40);
+                                     
+                    else if (x == 2) icon[i].Location = new Point(100 + c, -40);
+                                           
+                    else if (x == 3) icon[i].Location = new Point(230 + c, -40);
+                   
+                    else if (x == 4) icon[i].Location = new Point(300 + c, -40);
+                     
+                    else  icon[i].Location = new Point(370 + c, -40);
                 
+                    icon[i].Show();
+                    
                 }
              
             }
+          
         }
        
         private void UpdateTimer_Tick(object sender, EventArgs e)
             {
-               Point start1 = new Point(200, 0);
-                Point start2 = new Point(300, -100);
-                Point[] start = new Point[] { start1, start2 }; //количество позиций
-
-                PictureBox[] Icon = new PictureBox[] { Icon1, Icon2 };           
+             /*   Point start1 = new Point(100, 0);
+                Point start2 = new Point(200, -40);
+                Point start3 = new Point(270, -100);
+                Point start4 = new Point(340, 0);
+                Point start5 = new Point(400, -70);
+            Point[] start = new Point[] { start1, start2, start3, start4, start5 }; //количество позиций
+            */
+                PictureBox[] Icon = new PictureBox[] { Icon1, Icon2, Icon3, Icon4, Icon5 };           
                 down(Icon);
             
 
