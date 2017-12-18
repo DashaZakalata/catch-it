@@ -113,6 +113,26 @@ namespace app.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap long_live_windows_xp_bootscreen_animated_gif_by_macmachine95_d8dla2n {
+            get {
+                object obj = ResourceManager.GetObject("long_live_windows_xp_bootscreen_animated_gif_by_macmachine95-d8dla2n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap long_live_windows_xp_bootscreen_animated_gif_by_macmachine95_d8dla2n1 {
+            get {
+                object obj = ResourceManager.GetObject("long_live_windows_xp_bootscreen_animated_gif_by_macmachine95-d8dla2n1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap prog {
             get {
                 object obj = ResourceManager.GetObject("prog", resourceCulture);

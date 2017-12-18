@@ -2,7 +2,6 @@ C:\Users\Admin\Documents\GitHub\catch-it\app\app\bin\Debug\app.exe.config
 C:\Users\Admin\Documents\GitHub\catch-it\app\app\obj\Debug\app.exe
 C:\Users\Admin\Documents\GitHub\catch-it\app\app\obj\Debug\app.pdb
 C:\Users\Admin\Documents\GitHub\catch-it\app\app\obj\Debug\app.csprojResolveAssemblyReference.cache
-C:\Users\Admin\Documents\GitHub\catch-it\app\app\obj\Debug\app.Form1.resources
 C:\Users\Admin\Documents\GitHub\catch-it\app\app\obj\Debug\app.Properties.Resources.resources
 C:\Users\Admin\Documents\GitHub\catch-it\app\app\obj\Debug\app.csproj.GenerateResource.Cache
 C:\Users\Admin\Documents\GitHub\catch-it\app\app\bin\Debug\app.exe
@@ -16,3 +15,6 @@ D:\web\GitHub\catch-it\app\app\obj\Debug\app.csprojResolveAssemblyReference.cach
 D:\web\GitHub\catch-it\app\app\obj\Debug\app.Form1.resources
 D:\web\GitHub\catch-it\app\app\obj\Debug\app.Properties.Resources.resources
 D:\web\GitHub\catch-it\app\app\obj\Debug\app.csproj.GenerateResource.Cache
+C:\Users\Admin\Documents\GitHub\catch-it\app\app\obj\Debug\app.Game.resources
+C:\Users\Admin\Documents\GitHub\catch-it\app\app\obj\Debug\app.Password.resources
+C:\Users\Admin\Documents\GitHub\catch-it\app\app\obj\Debug\app.Load.resources
