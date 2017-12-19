@@ -117,12 +117,22 @@ namespace app
 
             switch (keyData)
             {
-                case Keys.Left: player.Left -= 10; break;
-                case Keys.Right: player.Left += 10; break;
-
+                case Keys.Left:
+                    {
+                        if (player.Location.X < -10) player.Left = -10;
+                        player.Left -= 10; }
+                     break;
+                case Keys.Right:
+                    {
+                        if (player.Location.X >500) player.Left = 500;
+                        player.Left += 10;
+                    }
+                    break;
                 default: return base.ProcessCmdKey(ref msg, keyData);
             }
             return true;
+           
+           
         }
 
 

@@ -39,7 +39,7 @@
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Image = global::app.Properties.Resources.long_live_windows_xp_bootscreen_animated_gif_by_macmachine95_d8dla2n1;
-            this.pictureBox1.Location = new System.Drawing.Point(-149, -182);
+            this.pictureBox1.Location = new System.Drawing.Point(-157, -208);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(951, 851);
             this.pictureBox1.TabIndex = 0;
