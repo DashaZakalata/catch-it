@@ -67,6 +67,12 @@
       <DependentUpon>Load.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="pusk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pusk.Designer.cs">
+      <DependentUpon>pusk.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Password.resx">
       <DependentUpon>Password.cs</DependentUpon>
     </EmbeddedResource>
@@ -85,6 +91,9 @@
     </Compile>
     <EmbeddedResource Include="Load.resx">
       <DependentUpon>Load.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pusk.resx">
+      <DependentUpon>pusk.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
