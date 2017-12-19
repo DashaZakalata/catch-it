@@ -125,15 +125,22 @@ namespace app
             return true;
         }
 
-
-      /*  private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             Hide();
-
-            Form F1 = new Wstart();
+            Form F1 = new pusk();
             F1.Show();
-        }*/
-       
+        }
+
+
+        /*  private void button1_Click(object sender, EventArgs e)
+          {
+              Hide();
+
+              Form F1 = new Wstart();
+              F1.Show();
+          }*/
+
     }
 
 

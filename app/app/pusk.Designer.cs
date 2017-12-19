@@ -77,7 +77,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = global::app.Properties.Resources.Icon4;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(240, 83);
+            this.pictureBox2.Location = new System.Drawing.Point(154, 78);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(70, 70);
             this.pictureBox2.TabIndex = 2;
@@ -134,7 +134,7 @@
             this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox7.Location = new System.Drawing.Point(83, 83);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(65, 65);
+            this.pictureBox7.Size = new System.Drawing.Size(58, 58);
             this.pictureBox7.TabIndex = 7;
             this.pictureBox7.TabStop = false;
             this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
@@ -155,9 +155,9 @@
             this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox9.BackgroundImage")));
             this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox9.Location = new System.Drawing.Point(83, 12);
+            this.pictureBox9.Location = new System.Drawing.Point(83, 18);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(65, 65);
+            this.pictureBox9.Size = new System.Drawing.Size(59, 59);
             this.pictureBox9.TabIndex = 9;
             this.pictureBox9.TabStop = false;
             // 

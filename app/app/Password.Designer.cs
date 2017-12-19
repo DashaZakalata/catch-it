@@ -37,8 +37,8 @@
             // 
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Location = new System.Drawing.Point(641, 216);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(642, 221);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(31, 32);
             this.button1.TabIndex = 0;
@@ -47,9 +47,9 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(502, 221);
+            this.textBox1.Location = new System.Drawing.Point(502, 226);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(132, 22);
+            this.textBox1.Size = new System.Drawing.Size(133, 22);
             this.textBox1.TabIndex = 1;
             // 
             // Password
@@ -61,7 +61,7 @@
             this.ClientSize = new System.Drawing.Size(845, 444);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Password";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "WindowsXP";
