@@ -12,7 +12,7 @@ namespace app
 {
     public partial class Password : Form
     {
-        
+        private readonly Timer timer0;
         public Password()
         {
 
@@ -25,8 +25,6 @@ namespace app
             Form F1 = new Load();
             F1.Show();
         }
-
-       
     }
 }
             
