@@ -30,3 +30,5 @@ C:\Users\Star\Documents\catch-it\app\app\obj\Debug\app.csproj.GenerateResource.C
 C:\Users\Star\Documents\catch-it\app\app\bin\Debug\app.exe
 C:\Users\Star\Documents\catch-it\app\app\bin\Debug\app.pdb
 C:\Users\Star\Documents\catch-it\app\app\obj\Debug\app.pusk.resources
+C:\Users\Admin\Documents\GitHub\catch-it\app\app\obj\Debug\app.pusk.resources
+C:\Users\Admin\Documents\GitHub\catch-it\app\app\obj\Debug\app.Exit.resources

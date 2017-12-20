@@ -17,10 +17,9 @@ namespace app
         private readonly Timer iconTimer;
         private int score = 10;
 
+
         public Game()
         {
-<<<<<<< HEAD:app/app/Game.cs
-
 
             updateTimer = new Timer();
             updateTimer.Interval = 700; //переодичность, частота 150мсек
@@ -34,27 +33,8 @@ namespace app
             player.Focus(); //можем с ним шото делать
             DoubleBuffered = true; //убирает мелькание
 
-=======
-            private readonly Timer updateTimer;
-            private readonly Timer iconTimer;
-            private int score = 0;
-
-        public Form1()
-            {
-                updateTimer = new Timer();
-                updateTimer.Interval = 700; //переодичность, частота 150мсек
-                updateTimer.Tick += UpdateTimer_Tick;
-                updateTimer.Enabled = true;
-                iconTimer = new Timer();
-                iconTimer.Interval = 1600; //для генерации чисел изменения положения иконок
-                iconTimer.Tick += iconTimer_Tick;
-                iconTimer.Enabled = true;
-                InitializeComponent();
-                player.Focus(); //можем с ним шото делать
-                DoubleBuffered = true; //убирает мелькание
-            
->>>>>>> Anna:app/app/Form1.cs
         }
+
 
         public void dropIcon(Point[] start, PictureBox[] Icon)
         {
@@ -106,10 +86,7 @@ namespace app
                     updateTimer.Stop();
                     iconTimer.Stop();
                 }
-<<<<<<< HEAD:app/app/Game.cs
-=======
-                
->>>>>>> Anna:app/app/Form1.cs
+
 
             }
 
@@ -122,18 +99,13 @@ namespace app
 
                 if (icon[i].Location.Y > 200)
                 {
-<<<<<<< HEAD:app/app/Game.cs
+
                     if (x == 1) icon[i].Location = new Point(10 + c, -70);
-
                     else if (x == 2) icon[i].Location = new Point(100 + c, -70);
-
                     else if (x == 3) icon[i].Location = new Point(230 + c, -70);
-
                     else if (x == 4) icon[i].Location = new Point(300 + c, -70);
-
                     else icon[i].Location = new Point(370 + c, -70);
 
-=======
                     icon[i].Hide();
 
                     if (x == 1)  icon[i].Location = new Point(10 + c, -90);
@@ -146,11 +118,9 @@ namespace app
                      
                     else  icon[i].Location = new Point(370 + c, -180);
                 
->>>>>>> Anna:app/app/Form1.cs
                     icon[i].Show();
 
                 }
-
             }
 
         }
