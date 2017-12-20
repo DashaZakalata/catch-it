@@ -48,15 +48,20 @@ namespace app
                 this.Hide();
             }
 
-            Form F = new Game();
+            Form F = new pusk();
             F.ShowDialog();
         }
 
         private void next_Click(object sender, EventArgs e)
         {
             Hide();
-            Form F1 = new Game();
+            Form F1 = new pusk();
             F1.Show();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

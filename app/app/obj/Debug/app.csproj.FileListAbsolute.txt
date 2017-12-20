@@ -18,3 +18,15 @@ D:\web\GitHub\catch-it\app\app\obj\Debug\app.csproj.GenerateResource.Cache
 C:\Users\Admin\Documents\GitHub\catch-it\app\app\obj\Debug\app.Game.resources
 C:\Users\Admin\Documents\GitHub\catch-it\app\app\obj\Debug\app.Password.resources
 C:\Users\Admin\Documents\GitHub\catch-it\app\app\obj\Debug\app.Load.resources
+C:\Users\Star\Documents\catch-it\app\app\bin\Debug\app.exe.config
+C:\Users\Star\Documents\catch-it\app\app\obj\Debug\app.exe
+C:\Users\Star\Documents\catch-it\app\app\obj\Debug\app.pdb
+C:\Users\Star\Documents\catch-it\app\app\obj\Debug\app.csprojResolveAssemblyReference.cache
+C:\Users\Star\Documents\catch-it\app\app\obj\Debug\app.Password.resources
+C:\Users\Star\Documents\catch-it\app\app\obj\Debug\app.Game.resources
+C:\Users\Star\Documents\catch-it\app\app\obj\Debug\app.Properties.Resources.resources
+C:\Users\Star\Documents\catch-it\app\app\obj\Debug\app.Load.resources
+C:\Users\Star\Documents\catch-it\app\app\obj\Debug\app.csproj.GenerateResource.Cache
+C:\Users\Star\Documents\catch-it\app\app\bin\Debug\app.exe
+C:\Users\Star\Documents\catch-it\app\app\bin\Debug\app.pdb
+C:\Users\Star\Documents\catch-it\app\app\obj\Debug\app.pusk.resources
