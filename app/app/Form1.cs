@@ -19,11 +19,11 @@ namespace app
         public Form1()
             {
                 updateTimer = new Timer();
-                updateTimer.Interval = 1000; //переодичность, частота 150мсек
+                updateTimer.Interval = 700; //переодичность, частота 150мсек
                 updateTimer.Tick += UpdateTimer_Tick;
                 updateTimer.Enabled = true;
                 iconTimer = new Timer();
-                iconTimer.Interval = 1000; //для генерации чисел изменения положения иконок
+                iconTimer.Interval = 1600; //для генерации чисел изменения положения иконок
                 iconTimer.Tick += iconTimer_Tick;
                 iconTimer.Enabled = true;
                 InitializeComponent();
@@ -65,14 +65,14 @@ namespace app
             up(Icon, x);
             for (int i = 0; i < Icon.Length; i++) // цикл для скрытия иконок при соприкосновении с человечком
             {
-                if ((player.Location.Y - 40) < (Icon[i].Location.Y + 60) & (Icon[i].Location.Y + 70) < (player.Location.Y + 10) & player.Location.X < (Icon[i].Location.X + 60) & (Icon[i].Location.X + 60) < (player.Location.X + 146))
+                if ((player.Location.Y - 50) < (Icon[i].Location.Y + 60) & (Icon[i].Location.Y + 60) < (player.Location.Y + 40) & player.Location.X < (Icon[i].Location.X + 60) & (Icon[i].Location.X + 60) < (player.Location.X + 146))
                 {
                     Icon[i].Hide();//иконка скрывается при соприкосновении с человечком
                     score += 10;
                     TextBox.Text = score.ToString(); // cчитаются и выводятся очки
                     
                 }
-                if (player.Location.Y < (Icon[i].Location.Y + 90) & ((player.Location.X + 146) < Icon[i].Location.X | Icon[i].Location.X < player.Location.X))
+                if (player.Location.Y < (Icon[i].Location.Y + 80) & ((player.Location.X + 146) < Icon[i].Location.X | Icon[i].Location.X < player.Location.X))
                 { 
                     Icon[i].Hide();//иконка скрывается при падении мимо
                     score -= 10;
@@ -89,7 +89,7 @@ namespace app
             for (int i = 0, c = 50; i < icon.Length & c < 600; i++, c+=80)
             {
 
-                if ((player.Location.Y + 15) < (icon[i].Location.Y + 60))
+                if (icon[i].Location.Y > 200)
                 {
                     icon[i].Hide();
 
