@@ -19,6 +19,7 @@ namespace app
 
         public Game()
         {
+<<<<<<< HEAD:app/app/Game.cs
 
 
             updateTimer = new Timer();
@@ -33,6 +34,26 @@ namespace app
             player.Focus(); //можем с ним шото делать
             DoubleBuffered = true; //убирает мелькание
 
+=======
+            private readonly Timer updateTimer;
+            private readonly Timer iconTimer;
+            private int score = 0;
+
+        public Form1()
+            {
+                updateTimer = new Timer();
+                updateTimer.Interval = 700; //переодичность, частота 150мсек
+                updateTimer.Tick += UpdateTimer_Tick;
+                updateTimer.Enabled = true;
+                iconTimer = new Timer();
+                iconTimer.Interval = 1600; //для генерации чисел изменения положения иконок
+                iconTimer.Tick += iconTimer_Tick;
+                iconTimer.Enabled = true;
+                InitializeComponent();
+                player.Focus(); //можем с ним шото делать
+                DoubleBuffered = true; //убирает мелькание
+            
+>>>>>>> Anna:app/app/Form1.cs
         }
 
         public void dropIcon(Point[] start, PictureBox[] Icon)
@@ -69,9 +90,26 @@ namespace app
                 if ((player.Location.Y - 50) < (Icon[i].Location.Y + 60) & (Icon[i].Location.Y + 60) < (player.Location.Y + 40) & player.Location.X < (Icon[i].Location.X + 60) & (Icon[i].Location.X + 60) < (player.Location.X + 146))
                 {
                     Icon[i].Hide();//иконка скрывается при соприкосновении с человечком
-                    TextBox.Text = score.ToString(); // cчитаются и выводятся очки
                     score += 10;
+                    TextBox.Text = score.ToString(); // cчитаются и выводятся очки
+                    
                 }
+               else if (player.Location.Y < (Icon[i].Location.Y + 80) & ((player.Location.X + 146) < Icon[i].Location.X | Icon[i].Location.X < player.Location.X))
+                { 
+                    Icon[i].Hide();//иконка скрывается при падении мимо
+                    score -= 10;
+                    TextBox.Text = score.ToString(); // при промахе отнимаются очки 
+                    
+                }
+                if(score >= 100 | score <= -30)
+                {
+                    updateTimer.Stop();
+                    iconTimer.Stop();
+                }
+<<<<<<< HEAD:app/app/Game.cs
+=======
+                
+>>>>>>> Anna:app/app/Form1.cs
 
             }
 
@@ -84,6 +122,7 @@ namespace app
 
                 if (icon[i].Location.Y > 200)
                 {
+<<<<<<< HEAD:app/app/Game.cs
                     if (x == 1) icon[i].Location = new Point(10 + c, -70);
 
                     else if (x == 2) icon[i].Location = new Point(100 + c, -70);
@@ -94,6 +133,20 @@ namespace app
 
                     else icon[i].Location = new Point(370 + c, -70);
 
+=======
+                    icon[i].Hide();
+
+                    if (x == 1)  icon[i].Location = new Point(10 + c, -90);
+                                     
+                    else if (x == 2) icon[i].Location = new Point(100 + c, -120);
+                                           
+                    else if (x == 3) icon[i].Location = new Point(230 + c, -140);
+                   
+                    else if (x == 4) icon[i].Location = new Point(300 + c, -160);
+                     
+                    else  icon[i].Location = new Point(370 + c, -180);
+                
+>>>>>>> Anna:app/app/Form1.cs
                     icon[i].Show();
 
                 }
