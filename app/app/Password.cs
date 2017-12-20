@@ -21,9 +21,26 @@ namespace app
 
         private void button1_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             this.Visible=false;
             Form F1 = new Load();
             F1.Show();
+=======
+            Hide();
+            string pas = "213";
+            if (textBox1.Text == pas)
+            {
+                Hide();
+                Form F1 = new Load();
+                F1.Show();
+            }
+            else MessageBox.Show(" Wrong password! error");
+        }
+
+        private void Password_Load(object sender, EventArgs e)
+        {
+
+>>>>>>> Rita
         }
     }
 }

@@ -57,6 +57,7 @@ namespace app
 
        /* void timer0_Tick(object sender, EventArgs e) // тут просто закрываю форму 
         {
+<<<<<<< HEAD
             Hide();
             Form F = new Game();
             F.Show();
@@ -64,12 +65,38 @@ namespace app
 
         }*/
 
+=======
+            //Задаем интервал для медленного исчезновения
+            timer0.Interval = 3000;
+            //Когдапроходит заданное время
+            if (this.Opacity <= 0)
+            {
+                //Таймер останавливается
+                timer0.Stop();
+                //Форма закрывается
+                this.Hide();
+            }
+
+            Form F = new pusk();
+            F.ShowDialog();
+        }
+>>>>>>> Rita
 
         private void next_Click(object sender, EventArgs e)
         {
             Hide();
+<<<<<<< HEAD
             Form F = new Game();
             F.Show();
+=======
+            Form F1 = new pusk();
+            F1.Show();
+>>>>>>> Rita
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
