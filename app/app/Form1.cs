@@ -72,13 +72,19 @@ namespace app
                     TextBox.Text = score.ToString(); // cчитаются и выводятся очки
                     
                 }
-                if (player.Location.Y < (Icon[i].Location.Y + 80) & ((player.Location.X + 146) < Icon[i].Location.X | Icon[i].Location.X < player.Location.X))
+               else if (player.Location.Y < (Icon[i].Location.Y + 80) & ((player.Location.X + 146) < Icon[i].Location.X | Icon[i].Location.X < player.Location.X))
                 { 
                     Icon[i].Hide();//иконка скрывается при падении мимо
                     score -= 10;
                     TextBox.Text = score.ToString(); // при промахе отнимаются очки 
                     
                 }
+                if(score >= 100 | score <= -30)
+                {
+                    updateTimer.Stop();
+                    iconTimer.Stop();
+                }
+                
 
             }
                 
