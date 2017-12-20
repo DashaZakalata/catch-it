@@ -26,7 +26,7 @@ namespace app
             updateTimer.Tick += UpdateTimer_Tick;
             updateTimer.Enabled = true;
             iconTimer = new Timer();
-            iconTimer.Interval = 1700; //для генерации чисел изменения положения иконок
+            iconTimer.Interval = 1200; //для генерации чисел изменения положения иконок
             iconTimer.Tick += iconTimer_Tick;
             iconTimer.Enabled = true;
             InitializeComponent();
@@ -57,7 +57,10 @@ namespace app
                 icon[i].Location = new Point(icon[i].Location.X, icon[i].Location.Y + 30);
             }
         }
-
+        private void calcScore_Tick(object sender, EventArgs e)
+        {
+            
+        }
         private void iconTimer_Tick(object sender, EventArgs e) //для генерации чисел в изменении положений иконок по оси Х
         {
             Random gen = new Random();
@@ -72,27 +75,42 @@ namespace app
                     Icon[i].Hide();//иконка скрывается при соприкосновении с человечком
                     score += 10;
                     TextBox.Text = score.ToString(); // cчитаются и выводятся очки
-                    
+
                 }
-               else if (player.Location.Y < (Icon[i].Location.Y + 80) & ((player.Location.X + 146) < Icon[i].Location.X | Icon[i].Location.X < player.Location.X))
-                { 
+                else if (player.Location.Y < (Icon[i].Location.Y + 85) & ((player.Location.X + 146) < Icon[i].Location.X | Icon[i].Location.X < player.Location.X))
+                {
                     Icon[i].Hide();//иконка скрывается при падении мимо
                     score -= 10;
                     TextBox.Text = score.ToString(); // при промахе отнимаются очки 
-                    
+
                 }
-                if(score >= 100 | score <= -30)
+                if (score <= -30 | score >= 100)
                 {
                     updateTimer.Stop();
                     iconTimer.Stop();
-                    Form F = new Exit();
-                    F.Show();
                 }
-
-
+                
+                  
             }
+            if (score <= -30)
+            {
+                Hide();
+                MessageBox.Show("You are lose the game");
 
+                Form F = new Exit();
+                F.Show();
+            }
+            if (score >= 100)
+            {
+                Hide();
+                MessageBox.Show("Congratulation! You are winner.");
+
+                Form F = new Exit();
+                F.Show();
+            }
         }
+
+
 
         public void up(PictureBox[] icon, int x) //появление иконки еще раз (изменение координат)
         {
@@ -104,15 +122,15 @@ namespace app
 
                     icon[i].Hide();
 
-                    if (x == 1)  icon[i].Location = new Point(10 + c, -90);
+                    if (x == 1)  icon[i].Location = new Point(10 + c, -90 - c);
                                      
-                    else if (x == 2) icon[i].Location = new Point(100 + c, -140);
+                    else if (x == 2) icon[i].Location = new Point(100 + c, -140 - c);
                                            
-                    else if (x == 3) icon[i].Location = new Point(230 + c, -180);
+                    else if (x == 3) icon[i].Location = new Point(230 + c, -180 - c);
                    
-                    else if (x == 4) icon[i].Location = new Point(300 + c, -200);
+                    else if (x == 4) icon[i].Location = new Point(300 + c, -220 - c);
                      
-                    else  icon[i].Location = new Point(340 + c, -50);
+                    else  icon[i].Location = new Point(340 + c, -50 - c);
                 
                     icon[i].Show();
 
@@ -156,45 +174,19 @@ namespace app
 
         private void button1_Click(object sender, EventArgs e)
         {
+            iconTimer.Stop();
+            updateTimer.Stop();
             Hide();
             Form F1 = new pusk();
             F1.Show();
         }
 
 
-        /*  private void button1_Click(object sender, EventArgs e)
-          {
-              Hide();
-
-              Form F1 = new Wstart();
-              F1.Show();
-          }*/
-
+     
     }
 
 
-   
-
-
-
-    /*private void DrawImageRectRect(PaintEventArgs e) для перерисовки, что б не мигала картинка
-{
-
-// Create image.
-Image newImage = Image.FromFile("SampImag.jpg"); 
-
-// Create rectangle for displaying image.
-Rectangle destRect = new Rectangle(100, 100, 450, 150);
-
-// Create rectangle for source image.
-Rectangle srcRect = new Rectangle(50, 50, 150, 150);
-GraphicsUnit units = GraphicsUnit.Pixel;
-
-// Draw image to screen.
-e.Graphics.DrawImage(newImage, destRect, srcRect, units);
-}*/
-
-    //Boolean y = mainCar.Location.Y.Equals(point.Y); - сравнение когда ыконка попадет на человечка
+  
 
 }
 

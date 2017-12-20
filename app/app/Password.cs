@@ -21,11 +21,11 @@ namespace app
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form F1 = new Load();
-            F1.Show();
+            //Hide();
             string pas = "OOP";
             if (textBox1.Text == pas)
             {
+                Form F1 = new Load();
                 Hide();
                 F1.Show();
             }
@@ -35,6 +35,11 @@ namespace app
 
         private void Password_Load(object sender, EventArgs e)
         {
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
