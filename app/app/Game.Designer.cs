@@ -69,7 +69,7 @@
             this.player.BackgroundImage = global::app.Properties.Resources.prog1;
             this.player.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.player.Location = new System.Drawing.Point(1, 296);
-            this.player.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.player.Margin = new System.Windows.Forms.Padding(4);
             this.player.Name = "player";
             this.player.Size = new System.Drawing.Size(176, 156);
             this.player.TabIndex = 9;
@@ -80,7 +80,7 @@
             this.Icon1.BackColor = System.Drawing.Color.Transparent;
             this.Icon1.BackgroundImage = global::app.Properties.Resources.Icon1;
             this.Icon1.Location = new System.Drawing.Point(65, 13);
-            this.Icon1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon1.Margin = new System.Windows.Forms.Padding(4);
             this.Icon1.Name = "Icon1";
             this.Icon1.Size = new System.Drawing.Size(80, 74);
             this.Icon1.TabIndex = 8;
@@ -91,7 +91,7 @@
             this.Icon2.BackColor = System.Drawing.Color.Transparent;
             this.Icon2.BackgroundImage = global::app.Properties.Resources.Icon2;
             this.Icon2.Location = new System.Drawing.Point(321, -135);
-            this.Icon2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon2.Margin = new System.Windows.Forms.Padding(4);
             this.Icon2.Name = "Icon2";
             this.Icon2.Size = new System.Drawing.Size(80, 74);
             this.Icon2.TabIndex = 11;
@@ -102,7 +102,7 @@
             this.Icon3.BackColor = System.Drawing.Color.Transparent;
             this.Icon3.BackgroundImage = global::app.Properties.Resources.Icon3;
             this.Icon3.Location = new System.Drawing.Point(181, -86);
-            this.Icon3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon3.Margin = new System.Windows.Forms.Padding(4);
             this.Icon3.Name = "Icon3";
             this.Icon3.Size = new System.Drawing.Size(80, 74);
             this.Icon3.TabIndex = 12;
@@ -113,7 +113,7 @@
             this.Icon4.BackColor = System.Drawing.Color.Transparent;
             this.Icon4.BackgroundImage = global::app.Properties.Resources.Icon4;
             this.Icon4.Location = new System.Drawing.Point(525, -209);
-            this.Icon4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon4.Margin = new System.Windows.Forms.Padding(4);
             this.Icon4.Name = "Icon4";
             this.Icon4.Size = new System.Drawing.Size(80, 74);
             this.Icon4.TabIndex = 13;
@@ -124,7 +124,7 @@
             this.Icon5.BackColor = System.Drawing.Color.Transparent;
             this.Icon5.BackgroundImage = global::app.Properties.Resources.Icon5;
             this.Icon5.Location = new System.Drawing.Point(680, -283);
-            this.Icon5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon5.Margin = new System.Windows.Forms.Padding(4);
             this.Icon5.Name = "Icon5";
             this.Icon5.Size = new System.Drawing.Size(80, 74);
             this.Icon5.TabIndex = 14;
@@ -156,9 +156,10 @@
             this.Controls.Add(this.TextBox);
             this.Controls.Add(this.player);
             this.Controls.Add(this.Icon1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Game";
-            this.Text = "Form2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Catch It";
             ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Icon1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Icon2)).EndInit();

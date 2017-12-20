@@ -43,7 +43,7 @@
             // next
             // 
             this.next.Location = new System.Drawing.Point(376, 300);
-            this.next.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.next.Margin = new System.Windows.Forms.Padding(4);
             this.next.Name = "next";
             this.next.Size = new System.Drawing.Size(100, 28);
             this.next.TabIndex = 1;
@@ -55,10 +55,10 @@
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Image = global::app.Properties.Resources.long_live_windows_xp_bootscreen_animated_gif_by_macmachine95_d8dla2n1;
-            this.pictureBox1.Location = new System.Drawing.Point(-3, -41);
+            this.pictureBox1.Location = new System.Drawing.Point(-3, -87);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(863, 491);
+            this.pictureBox1.Size = new System.Drawing.Size(863, 537);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -71,8 +71,9 @@
             this.ClientSize = new System.Drawing.Size(845, 444);
             this.Controls.Add(this.next);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Load";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "WindowsXP";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
