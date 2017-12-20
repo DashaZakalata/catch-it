@@ -30,19 +30,21 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game));
             this.TextBox = new System.Windows.Forms.RichTextBox();
-            this.player = new System.Windows.Forms.PictureBox();
             this.Icon1 = new System.Windows.Forms.PictureBox();
             this.Icon2 = new System.Windows.Forms.PictureBox();
             this.Icon3 = new System.Windows.Forms.PictureBox();
             this.Icon4 = new System.Windows.Forms.PictureBox();
             this.Icon5 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.player = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Icon1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Icon2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Icon3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Icon4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Icon5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
             this.SuspendLayout();
             // 
             // TextBox
@@ -53,8 +55,8 @@
             this.TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.TextBox.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.TextBox.HideSelection = false;
-            this.TextBox.Location = new System.Drawing.Point(490, 50);
-            this.TextBox.Margin = new System.Windows.Forms.Padding(13, 13, 13, 13);
+            this.TextBox.Location = new System.Drawing.Point(460, 47);
+            this.TextBox.Margin = new System.Windows.Forms.Padding(13);
             this.TextBox.Name = "TextBox";
             this.TextBox.ReadOnly = true;
             this.TextBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -62,17 +64,6 @@
             this.TextBox.Size = new System.Drawing.Size(82, 32);
             this.TextBox.TabIndex = 10;
             this.TextBox.Text = "0";
-            // 
-            // player
-            // 
-            this.player.BackColor = System.Drawing.Color.Transparent;
-            this.player.BackgroundImage = global::app.Properties.Resources.prog1;
-            this.player.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.player.Location = new System.Drawing.Point(1, 240);
-            this.player.Name = "player";
-            this.player.Size = new System.Drawing.Size(132, 127);
-            this.player.TabIndex = 9;
-            this.player.TabStop = false;
             // 
             // Icon1
             // 
@@ -129,12 +120,32 @@
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.Location = new System.Drawing.Point(4, 47);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(26, 28);
             this.button1.TabIndex = 15;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::app.Properties.Resources.programer;
+            this.pictureBox1.Location = new System.Drawing.Point(-19, 342);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(657, 50);
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
+            // 
+            // player
+            // 
+            this.player.BackColor = System.Drawing.Color.Transparent;
+            this.player.BackgroundImage = global::app.Properties.Resources.prog1;
+            this.player.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.player.Location = new System.Drawing.Point(4, 239);
+            this.player.Name = "player";
+            this.player.Size = new System.Drawing.Size(132, 127);
+            this.player.TabIndex = 17;
+            this.player.TabStop = false;
             // 
             // Game
             // 
@@ -143,23 +154,26 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(634, 361);
+            this.Controls.Add(this.player);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Icon5);
             this.Controls.Add(this.Icon4);
             this.Controls.Add(this.Icon3);
             this.Controls.Add(this.Icon2);
             this.Controls.Add(this.TextBox);
-            this.Controls.Add(this.player);
             this.Controls.Add(this.Icon1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Game";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Catch It";
-            ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Icon1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Icon2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Icon3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Icon4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Icon5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -167,12 +181,13 @@
         #endregion
 
         private System.Windows.Forms.RichTextBox TextBox;
-        private System.Windows.Forms.PictureBox player;
         private System.Windows.Forms.PictureBox Icon1;
         private System.Windows.Forms.PictureBox Icon2;
         private System.Windows.Forms.PictureBox Icon3;
         private System.Windows.Forms.PictureBox Icon4;
         private System.Windows.Forms.PictureBox Icon5;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox player;
     }
 }

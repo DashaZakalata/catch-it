@@ -121,8 +121,8 @@
   <data name="Icon4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="new" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="replay" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\replay.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="xp_windows_vektor_74137_2560x1440" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\xp_windows_vektor_74137_2560x14401.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -138,6 +138,12 @@
   </data>
   <data name="long_live_windows_xp_bootscreen_animated_gif_by_macmachine95-d8dla2n" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\long_live_windows_xp_bootscreen_animated_gif_by_macmachine95-d8dla2n.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="programer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\programer1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,7 +163,7 @@
   <data name="prog1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\prog2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="replay" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\replay.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="prog11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\prog11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
