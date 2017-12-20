@@ -15,7 +15,7 @@ namespace app
         
         private readonly Timer updateTimer;
         private readonly Timer iconTimer;
-        private int score = 10;
+        private int score = 0;
 
 
         public Game()
@@ -26,7 +26,7 @@ namespace app
             updateTimer.Tick += UpdateTimer_Tick;
             updateTimer.Enabled = true;
             iconTimer = new Timer();
-            iconTimer.Interval = 1800; //для генерации чисел изменения положения иконок
+            iconTimer.Interval = 1700; //для генерации чисел изменения положения иконок
             iconTimer.Tick += iconTimer_Tick;
             iconTimer.Enabled = true;
             InitializeComponent();
@@ -85,6 +85,8 @@ namespace app
                 {
                     updateTimer.Stop();
                     iconTimer.Stop();
+                    Form F = new Exit();
+                    F.Show();
                 }
 
 
@@ -100,23 +102,17 @@ namespace app
                 if (icon[i].Location.Y > 200)
                 {
 
-                    if (x == 1) icon[i].Location = new Point(10 + c, -70);
-                    else if (x == 2) icon[i].Location = new Point(100 + c, -70);
-                    else if (x == 3) icon[i].Location = new Point(230 + c, -70);
-                    else if (x == 4) icon[i].Location = new Point(300 + c, -70);
-                    else icon[i].Location = new Point(370 + c, -70);
-
                     icon[i].Hide();
 
                     if (x == 1)  icon[i].Location = new Point(10 + c, -90);
                                      
-                    else if (x == 2) icon[i].Location = new Point(100 + c, -120);
+                    else if (x == 2) icon[i].Location = new Point(100 + c, -140);
                                            
-                    else if (x == 3) icon[i].Location = new Point(230 + c, -140);
+                    else if (x == 3) icon[i].Location = new Point(230 + c, -180);
                    
-                    else if (x == 4) icon[i].Location = new Point(300 + c, -160);
+                    else if (x == 4) icon[i].Location = new Point(300 + c, -200);
                      
-                    else  icon[i].Location = new Point(370 + c, -180);
+                    else  icon[i].Location = new Point(340 + c, -50);
                 
                     icon[i].Show();
 
