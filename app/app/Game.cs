@@ -15,7 +15,7 @@ namespace app
         
         private readonly Timer updateTimer;
         private readonly Timer iconTimer;
-        private int score = 10;
+        private int score = 0;
 
         public Game()
         {
@@ -69,8 +69,16 @@ namespace app
                 if ((player.Location.Y - 50) < (Icon[i].Location.Y + 60) & (Icon[i].Location.Y + 60) < (player.Location.Y + 40) & player.Location.X < (Icon[i].Location.X + 60) & (Icon[i].Location.X + 60) < (player.Location.X + 146))
                 {
                     Icon[i].Hide();//иконка скрывается при соприкосновении с человечком
-                    TextBox.Text = score.ToString(); // cчитаются и выводятся очки
                     score += 10;
+                    TextBox.Text = score.ToString(); // cчитаются и выводятся очки
+                    
+                } else
+                if(player.Location.Y < (Icon[i].Location.Y + 80) & (( player.Location.X + 146) < Icon[i].Location.X | Icon[i].Location.X < player.Location.X))
+                {
+                    Icon[i].Hide();
+                    score -= 10; //при падении мимо отнимает очки
+                    TextBox.Text = score.ToString();
+                    
                 }
 
             }
@@ -85,13 +93,9 @@ namespace app
                 if (icon[i].Location.Y > 200)
                 {
                     if (x == 1) icon[i].Location = new Point(10 + c, -70);
-
                     else if (x == 2) icon[i].Location = new Point(100 + c, -70);
-
                     else if (x == 3) icon[i].Location = new Point(230 + c, -70);
-
                     else if (x == 4) icon[i].Location = new Point(300 + c, -70);
-
                     else icon[i].Location = new Point(370 + c, -70);
 
                     icon[i].Show();
@@ -111,34 +115,29 @@ namespace app
         }
 
 
-
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
 
             switch (keyData)
             {
-                case Keys.Left: player.Left -= 10; break;
-                case Keys.Right: player.Left += 10; break;
-
+                case Keys.Left:
+                    {
+                        if (player.Location.X < -10) player.Left = -10; //игрок не выходит за пределы
+                        player.Left -= 10; }
+                     break;
+                case Keys.Right:
+                    {
+                        if (player.Location.X > 500) player.Left = 500;
+                        player.Left += 10;
+                    }
+                    break;
                 default: return base.ProcessCmdKey(ref msg, keyData);
             }
             return true;
+                  
         }
-
-
-      /*  private void button1_Click(object sender, EventArgs e)
-        {
-            Hide();
-
-            Form F1 = new Wstart();
-            F1.Show();
-        }*/
-       
+     
     }
-
-
-   
-
 
 
     /*private void DrawImageRectRect(PaintEventArgs e) для перерисовки, что б не мигала картинка

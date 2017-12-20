@@ -66,7 +66,7 @@
             this.player.BackColor = System.Drawing.Color.Transparent;
             this.player.BackgroundImage = global::app.Properties.Resources.prog1;
             this.player.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.player.Location = new System.Drawing.Point(1, 226);
+            this.player.Location = new System.Drawing.Point(-4, 232);
             this.player.Name = "player";
             this.player.Size = new System.Drawing.Size(146, 141);
             this.player.TabIndex = 9;
@@ -122,7 +122,7 @@
             this.Icon5.TabIndex = 14;
             this.Icon5.TabStop = false;
             // 
-            // Form2
+            // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -134,7 +134,7 @@
             this.Controls.Add(this.TextBox);
             this.Controls.Add(this.player);
             this.Controls.Add(this.Icon1);
-            this.Name = "Form2";
+            this.Name = "Game";
             this.Text = "Form2";
             ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Icon1)).EndInit();
